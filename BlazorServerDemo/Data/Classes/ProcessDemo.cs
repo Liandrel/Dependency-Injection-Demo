@@ -1,4 +1,6 @@
-﻿namespace BlazorServerDemo.Data
+﻿using BlazorServerDemo.Data.Interfaces;
+
+namespace BlazorServerDemo.Data.Classes
 {
     public class ProcessDemo
     {
@@ -11,7 +13,7 @@
 
         public int GetDaysInMonth()
         {
-            return DateTime.DaysInMonth(_demo.StartupTime.Year,_demo.StartupTime.Month);
+            return DateTime.DaysInMonth(_demo.StartupTime.Year, _demo.StartupTime.Month);
         }
     }
 }

@@ -1,4 +1,5 @@
-using BlazorServerDemo.Data;
+using BlazorServerDemo.Data.Classes;
+using BlazorServerDemo.Data.Interfaces;
 
 namespace BlazorServerDemo.Tests
 {

@@ -1,4 +1,4 @@
-﻿namespace BlazorServerDemo.Data
+﻿namespace BlazorServerDemo.Data.Interfaces
 {
     public interface IDemo
     {
