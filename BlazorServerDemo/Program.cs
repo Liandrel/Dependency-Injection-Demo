@@ -4,6 +4,7 @@ using BlazorServerDemo.Data.Classes;
 using BlazorServerDemo.Data.Interfaces;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddDemoInfo();
+
+builder.Services.TryAddTransient<IDemo, Demo>();
+builder.Services.TryAddEnumerable(ServiceDescriptor.Transient<IDemo, Demo>());
 
 //*****Samples******
 //builder.Services.AddTransient<Demo>();
